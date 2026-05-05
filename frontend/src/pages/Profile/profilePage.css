@@ -1,0 +1,212 @@
+.profile-page-whole {
+  display: grid;
+  /* Column 1: 250px for pic | Column 2: the rest */
+  grid-template-columns: 250px 1fr;
+  gap: 30px;
+  width: 90%;
+  max-width: 850px;
+  min-height: auto;
+  max-height: none;
+  margin: 40px auto;
+  padding-bottom: 50px !important;
+  background: #111;
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  color: white;
+  align-items: start;
+}
+
+.profpic {
+  grid-column: 1;
+  width: 200px;
+  height: 200px;
+  background: #1a1a1a;
+  border: 2px solid #333;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+  padding: 10px;
+}
+
+.profile-page-info {
+  grid-column: 2;
+  margin: 0 auto;
+  margin-right: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  max-height: 100px;
+}
+
+.profile-edit__form {
+  grid-column: 2;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-right: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  max-height: 100px;
+
+}
+.profile-password__form {
+  grid-column: 2;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-left: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  width: 100%;
+  max-width: 320px;
+  max-height: 100px;
+
+}
+
+.profile-page-info p {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  margin-left: 120px;
+  font-size: 16px;
+  width: 100%;
+}
+
+.profile-page-info i {
+  color: #888;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 13px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.profile-edit__form, .profile-password__form {
+  grid-column: 2;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.profile-edit__field, .profile-password__field {
+  width: 100%;
+  display: flex;
+  font-size: 12px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  margin-bottom: 10px;
+  margin-left: 80px;
+  transform: translateY(-250px);
+}
+
+.profile-edit__input,
+.profile-edit__textarea,
+.profile-password__input,
+.profile-password__textarea {
+  font-family: sans-serif;
+  width: 75%;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 10px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.profile-edit__input:focus,
+.profile-edit__textarea:focus,
+.profile-password__input:focus,
+.profile-password__textarea:focus
+{
+  border-color: #e41b1b;
+}
+
+.update-buttons-container {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+  width: 100%;
+}
+.profile-edit__button-row,
+.profile-password__button-row {
+  grid-column: 2;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 10px;
+  margin-bottom: 100px;
+  margin-left: 50px;
+  width: 100%;
+  transform: translateY(-250px);
+}
+
+.update-user-btn,
+.profile-edit__button-row button,
+ .profile-password__button-row button {
+  background: linear-gradient(135deg, #e41b1b, #c91515);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s;
+  min-width: 120px;
+}
+
+.update-user-btn:hover,
+.profile-edit__button-row button:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.2);
+}
+
+.profile-edit__button-row button[type="button"],
+.profile-password__button-row button[type="button"]
+
+{
+  background: #333;
+}
+
+.section-divider {
+  width: 90%;
+  max-width: 850px;
+  height: 1px;
+  margin: 40px auto;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 10px 1px rgba(255, 255, 255, 0.05);
+
+  border: none;
+}
+
+#non-hidden {
+    border: 2px solid white !important;
+}
+
+#hidden {
+  visibility: hidden;
+    border: 2px solid white !important;
+  margin-top: -100px;
+}
+
+.profile-success-alert {
+  color: #dcb900;
+  margin-bottom: 10px; 
+  transform: translateX(395px)
+}

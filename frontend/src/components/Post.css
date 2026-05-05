@@ -1,0 +1,283 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.feed-wrapper {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  min-height: 100vh;
+  color: white;
+}
+
+.feed-wrapper h2 {
+  font-size: 40px;
+  margin: 20px;
+}
+
+.feed-container {
+  position: relative;
+  width: 100%;
+  height: 75vh;
+  overflow: visible;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.feed-track {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: transform 0.5s ease;
+  z-index: 1;
+}
+
+.slide {
+  min-width: 100vw;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+}
+
+.card {
+  width: 70%;
+  max-width: 900px;
+  height: 90%;
+
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  transition:
+    transform 0.3s ease,
+    opacity 0.3s ease;
+
+  pointer-events: none;
+}
+
+.card.active {
+  transform: scale(1.05);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.card:not(.active) {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.card img {
+  width: 100%;
+  height: 60%;
+  object-fit: cover;
+}
+
+.card h2 {
+  margin: 12px 16px 6px;
+  font-size: 24px;
+}
+
+.card p {
+  margin: 4px 16px;
+  font-size: 14px;
+  opacity: 0.85;
+}
+
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+
+  z-index: 100;
+
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+
+  font-size: 32px;
+  padding: 14px 18px;
+  border-radius: 12px;
+
+  cursor: pointer;
+}
+
+.nav.left {
+  left: 20px;
+}
+
+.nav.right {
+  right: 20px;
+}
+
+.nav:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.cuisine-bar {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+
+  padding: 16px;
+  background: #000;
+}
+
+.cuisine-bar button {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+
+  background: #222;
+  color: white;
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.cuisine-bar button:hover {
+  background: #333;
+}
+
+.cuisine-bar button.active {
+  background: white;
+  color: black;
+}
+
+.filtered-feed {
+  display: flex;
+  gap: 20px;
+
+  overflow-x: auto;
+  padding: 20px;
+}
+
+.filtered-feed::-webkit-scrollbar {
+  height: 6px;
+}
+
+.filtered-feed::-webkit-scrollbar-thumb {
+  background: #333;
+  border-radius: 10px;
+}
+
+.filtered-card {
+  min-width: 320px;
+  max-width: 320px;
+  height: 420px;
+
+  background: #111;
+  border-radius: 16px;
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  color: white;
+
+  transition: transform 0.3s ease;
+}
+
+.filtered-card:hover {
+  transform: scale(1.05);
+}
+
+.filtered-card img {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+}
+
+.filtered-content {
+  padding: 10px 12px;
+}
+
+.filtered-content h3 {
+  margin-bottom: 6px;
+  font-size: 18px;
+}
+
+.filtered-content p {
+  font-size: 13px;
+  margin: 3px 0;
+  opacity: 0.85;
+}
+
+.rating {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  margin-top: 12px;
+  width: 100%;
+}
+
+.star {
+  font-size: 22px;
+  cursor: pointer;
+  color: #444;
+  transition: 0.2s;
+}
+
+.star:hover {
+  color: gold;
+  text-shadow: 0 0 8px gold;
+}
+
+.star.no-hover {
+  pointer-events: none;
+}
+
+.star.filled {
+  color: gold;
+  text-shadow: 0 0 8px gold;
+}
+
+.rating:has(.star:nth-child(1):hover) .star:nth-child(-n + 1),
+.rating:has(.star:nth-child(2):hover) .star:nth-child(-n + 2),
+.rating:has(.star:nth-child(3):hover) .star:nth-child(-n + 3),
+.rating:has(.star:nth-child(4):hover) .star:nth-child(-n + 4),
+.rating:has(.star:nth-child(5):hover) .star:nth-child(-n + 5) {
+  color: gold;
+  text-shadow: 0 0 8px gold;
+}
+
+.avg {
+  margin-left: 10px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/*
+ * Main styling for the component exists in components/Favourites.css
+ * These are specific to the Post.jsx page
+ * */
+.filtered-card .favourites-add-button {
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.slide .favourites-add-button {
+  margin-top: 10px;
+  width: fit-content;
+  align-self: center;
+}
+
+.YourPlaces {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+.message{
+  font-size: 15px
+}

@@ -1,0 +1,105 @@
+/* Page wrapper (matches feed background) */
+.add-place-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: #000;
+}
+
+/* Card (reusing your feed card style) */
+.add-place-card {
+  width: 70%;
+  max-width: 600px;
+
+  background: #111;
+  border-radius: 16px;
+
+  padding: 24px;
+  color: white;
+
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+/* Title */
+.add-place-card h2 {
+  margin-bottom: 16px;
+  text-align: center;
+}
+
+/* Form layout */
+.add-place-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Group spacing */
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+/* Labels */
+.form-group label {
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+/* Inputs */
+.add-place-form input,
+.add-place-form textarea,
+.add-place-form select {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+
+  padding: 10px;
+  color: white;
+  font-size: 14px;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+/* Focus state (matches your theme) */
+.add-place-form input:focus,
+.add-place-form textarea:focus,
+.add-place-form select:focus {
+  border: 1px solid #ff3c00;
+}
+
+/* Textarea */
+.add-place-form textarea {
+  resize: none;
+}
+
+/* Button */
+.submit-btn {
+  margin-top: 10px;
+  padding: 12px;
+
+  background: #e41b1b;
+  border: none;
+  border-radius: 10px;
+
+  color: white;
+  font-weight: bold;
+
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+/* Hover effect */
+.submit-btn:hover {
+  background: #ff5c2b;
+  transform: translateY(-1px);
+}
+
+/* Error message */
+.error-message {
+  color: #ff4d4d;
+  margin-bottom: 10px;
+  text-align: center;
+}

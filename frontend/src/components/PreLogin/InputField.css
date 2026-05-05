@@ -1,0 +1,106 @@
+.input-field {
+  padding-left: 38px;
+}
+.input-wrapper {
+  position: relative;
+  width: 100%;
+  /* margin-bottom: 4px; */
+}
+
+.input-field {
+  width: 100%;
+  /* padding: 10px; */
+  padding: 18px 12px 8px 12px; /* top space for label */
+  box-sizing: border-box;
+  background: #1a1a1a;
+  color: white;
+  border: 1px solid #333;
+  border-radius: 8px;
+  font-size: 14px;
+  outline: none;
+  transition: 0.2s;
+}
+
+/* .input-field::placeholder {
+  color: #777;
+} */
+
+.input-field:focus {
+  border: 1px solid #ff3c00;
+  box-shadow: none;
+}
+
+.input-icon {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  /* below line regulates the position of the icons */
+  transform: translateY(-50%);
+  color: #aaa;
+  /* color: #ff4d4d; */
+}
+
+/* If icon exists, push input text */
+.input-wrapper .input-icon + .input-field {
+  padding-left: 36px;
+}
+
+/* Password toggle (eye icon) */
+.password-toggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  /* color: #ff4d4d; */
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Hover effect for toggle */
+.password-toggle:hover {
+  color: #777;
+}
+
+/* Floating label */
+.input-wrapper::before {
+  content: attr(data-placeholder);
+  position: absolute;
+  left: 38px; /* aligns icon spacing*/
+  top: 50%;
+  transform: translateY(-50%);
+
+  color: #777;
+  font-size: 14px;
+
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+.floating-label {
+  position: absolute;
+  left: 38px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #777;
+  font-size: 14px;
+  pointer-events: none;
+  transition: 0.2s ease;
+}
+
+/* float on focus or value */
+.input-wrapper.has-value .floating-label,
+.input-wrapper:focus-within .floating-label {
+  top: 10px;
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 600;
+}
+
+/* autofill label control */
+.input-field:-webkit-autofill + .floating-label {
+  top: 10px;
+  font-size: 11px;
+  color: #aaa;
+  font-weight: 600;
+}

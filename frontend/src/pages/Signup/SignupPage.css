@@ -1,0 +1,71 @@
+.signup-page {
+  height: 100vh;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  width: 135px;
+  height: auto;
+  padding-bottom: 40px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  /* width: 100%; */
+}
+
+.signup-card {
+  width: 90%;
+  max-width: 420px;
+  background: #111;
+  border-radius: 16px;
+  padding: 24px;
+  color: white;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.signup-card h2 {
+  margin-bottom: 40px;
+}
+
+/* .error {
+  color: #ff4d4d;
+  margin-bottom: 10px;
+} */
+
+.already-registered {
+  margin-top: 20px;
+  font-size: 16px;
+  color: #ccc;
+  text-align: center;
+}
+
+.already-registered a {
+  color: #dcb900;
+  text-decoration: none;
+}
+
+.already-registered a:hover {
+  text-decoration: underline;
+  color: #ff4d4d;
+}
+
+.error-message {
+  animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
