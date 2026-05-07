@@ -22,7 +22,7 @@ Users can browse venues added by coworkers, leave ratings, and build a list of f
 
 ### Short Demo:
 
-<video src="./Crustpilot-demo.mp4" controls width="900">[Watch the demo here](./Crustpilot-demo.mp4)</video>
+[▶ Watch here](https://github.com/Jessica-Tslv/Crustpilot/releases/tag/v0.1.0)
 
 ### ✔︎ Features
 
