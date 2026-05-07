@@ -18,7 +18,11 @@ Crustpilot is a full-stack MERN application designed to help teams discover and 
 
 Users can browse venues added by coworkers, leave ratings, and build a list of favourite places.
 
-### Live Demo: https://foodies-crustpilot.food/
+<p style="font-size:70%">Original repo: <a href="https://github.com/alwilson3/team-foodies-crust-pilot">here</a></p>
+
+### Short Demo:
+
+<video src="./Crustpilot-demo.mp4" controls width="900">[Watch the demo here](./Crustpilot-demo.mp4)</video>
 
 ### ✔︎ Features
 
